@@ -1,0 +1,85 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+# Rock wins against scissors.
+# Scissors win against paper.
+# Paper wins against rock.
+import random
+
+mychoice = str(input("What do you choose? R/P/S: "))
+if mychoice == 'R':
+  mychoice = 1
+elif mychoice == 'P':
+  mychoice = 2
+else:
+  mychoice = 3
+machinechoice = random.randint(1, 3)
+if mychoice == 1:
+  print("Your Choice")
+  print(rock)
+  if machinechoice == 1:
+    print("Machine Choice")
+    print(rock)
+    print("Draw")
+  elif machinechoice == 2:
+    print("Machine Choice")
+    print(paper)
+    print("You lose")
+  else:
+    print("Machine Choice")
+    print(scissors)
+    print("You won")
+elif mychoice == 2:
+  print("Your Choice")
+  print(paper)
+  if machinechoice == 1:
+    print("Machine Choice")
+    print(rock)
+    print("You lose")
+  elif machinechoice == 2:
+    print("Machine Choice")
+    print(paper)
+    print("Draw")
+  else:
+    print("Machine Choice")
+    print(scissors)
+    print("You lose")
+else:
+  print("Your Choice")
+  print(scissors)
+  if machinechoice == 1:
+    print("Machine Choice")
+    print(rock)
+    print("You lose")
+  elif machinechoice == 2:
+    print("Machine Choice")
+    print(paper)
+    print("You won")
+  else:
+    print("Machine Choice")
+    print(scissors)
+    print("Draw")
